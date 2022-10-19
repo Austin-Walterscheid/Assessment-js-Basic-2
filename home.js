@@ -52,16 +52,13 @@ console.log(greetUser`Andrew`)
 const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
 //CODE HERE
-function canWeDeliver (zipcode){
-    for(let i = 0; i < deliveryAreaZipCodes.length; i++){
-        if(i !== deliveryAreaZipCodes[i]){
-        return 'Sorry, we cant deliver to that address'
+function canWeDeliver (zipcode) {
+    if (deliveryAreaZipCodes.includes(zipcode)){
+        return `You are eligible for delivery!`
     }else{
-        return `You are in our delivery Zone!`
-    }
+       return `not eligible for delivery`
     }
 }
-console.log(canWeDeliver(8205))
 
 /* 
     Problem 2 Continued
@@ -81,16 +78,16 @@ console.log(canWeDeliver(8205))
 */
 
 // CODE HERE
-function canWeDeliverTwo (zipcode) {
-    console.log(deliveryAreaZipCodes.includes(zipcode))
-} if (canWeDeliverTwo === true){
-    console.log(`You are in our Delivery zone!`)
-} else{
-    console.log(`Sorry, we cant deliver to that address`)
+function canWeDeliveryTwo(zipcode) {
+    for (let i = 0; i < deliveryAreaZipCodes.length; i++) {
+        if (zipcode === deliveryAreaZipCodes[i]){
+            return `You are in our delivery zone!`
+        }
+    }
+    return `sorry you are out of our delivery zone`
 }
 
-
-canWeDeliverTwo(8203)
+console.log(canWeDeliveryTwo(85205))
 //////////////////PROBLEM 3////////////////////
 /* 
     Below is an array of objects that have some
@@ -125,7 +122,7 @@ const deals = [
 */
 
 //CODE HERE
-
+deals[0].title = deals[0].title.replace(`15`, `10`)
 
 
 /*
@@ -142,3 +139,5 @@ const deals = [
 */
 
 //CODE HERE
+deals[1].desc = deals[1].desc.replace(`March`,`April`).trim()
+console.log(deals)

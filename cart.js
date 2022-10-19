@@ -55,7 +55,11 @@ console.log(summedPrice)
 */
 
 //CODE HERE
-
+function calcFinalPrice(cartTotal, couponValue, tax) {
+    return cartTotal + (cartTotal * tax) - couponValue
+ }
+ 
+ console.log(calcFinalPrice(10, 2, 0.05))
 
 
 //////////////////PROBLEM 3////////////////////
@@ -80,7 +84,9 @@ console.log(summedPrice)
 
 /*
     TEXT ANSWER HERE
-
+name: (string) , customer orders need a name so I know when the order is for 
+    address: (string) I need to know where to send the merchandise
+    phone : (number), what i I need to call user if order goes bad
 */
 
 /*
@@ -89,3 +95,9 @@ console.log(summedPrice)
 */
 
 //CODE HERE
+let custObjs = {
+    name : `Jody`,
+    address: `1234 main st, lehi, UT 84043`,
+    phone: 8015551234,
+    wantsMarket
+}

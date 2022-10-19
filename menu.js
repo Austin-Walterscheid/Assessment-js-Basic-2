@@ -71,7 +71,6 @@ console.log(pizza.tags[1])
 
 //CODE HERE
 let {price} = pizza
-price = 7
 console.log(price)
 /*
     Fourth, and last, destructure the category
@@ -97,13 +96,7 @@ console.log(category)
 */
 
 //CODE HERE
-let arrOne = [
-    {
-        const chicken = {
 
-        },
-    }
-]
 
 
 //////////////////PROBLEM 4////////////////////

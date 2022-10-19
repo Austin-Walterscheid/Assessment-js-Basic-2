@@ -20,16 +20,15 @@
 */
 
 //CODE HERE
-class Employee {
-    constructor(name, shifts){
-    this.name = name;
-    this.shifts = shifts;
+class Employee{
+    constructor(name, shifts) {
+        this.name = name
+        this.shifts = shifts
     }
-    getScheduele(){
-        console.log(this.name, `works on`, this.shifts)
+    getScheduel() {
+        console.log(`${this.name} works on ${this.shifts}`)
     }
 }
-
 
 /*
     Create a new instance of your class.
@@ -93,21 +92,20 @@ console.log(empTwo)
 */
 
 //CODE HERE
-let emparr = []
 class Manager extends Employee {
-    constructor (name, shifts, employees) {
+    constructor(name, shifts, employees) {
         super(name, shifts)
-
         this.employees = employees
     }
-    getEmployees(){
-        console.log(this.name, `manages`, this.employees)
+
+    getEmployees() {
+        console.log(`${thisname} manages ${this.employees}`)
     }
-    addEmployee(){
-        console.log(push.this.employee)
+
+    addEmployee(emp) {
+        this.employees.push(emp)
     }
 }
-
 /*
     Create a new instance of your class.
     Save it to a variable called `manager`.
@@ -120,7 +118,7 @@ class Manager extends Employee {
 */ 
 
 //CODE HERE
-let manager = new Manager(`Winston`, `weekday mornings, weekday afternoons`, `Cece and Schmidt`)
+let manager = new Manager(`Winston`, `weekday mornings, weekday afternoons`, [`Cece and Schmidt`])
 
 /*
     Call the `getEmployees` method on the
@@ -136,8 +134,7 @@ manager.getEmployees()
 */
 
 //CODE HERE 
-manager.employees = `Coach`
-manager.addEmployee()
+manager.addEmployee(`Coach`)
 /*
     Call the `getEmployees` method on the
     `manager` object again to confirm 
